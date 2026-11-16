@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080808">
+  <meta name="description" content="CHASKI DELIVERY: soluciones de recojo y entrega para personas y negocios.">
+  <title>CHASKI DELIVERY | Precisión en cada entrega</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="css/estilos.css">
+  <script defer src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script type="module" src="js/funciones.js"></script>
+  <link rel="stylesheet" href="css/pokeman.css">
+  <script type="module" src="js/pokeman.js"></script>
+  <link rel="stylesheet" href="css/mar-de-limon.css">
+  <script type="module" src="js/mar-de-limon.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <header class="header" id="inicio">
+    <a class="brand" href="#inicio" aria-label="CHASKI DELIVERY, inicio">
+      <!-- Coloca el logotipo en img/logo.png; si no existe, se muestra la marca tipográfica. -->
+      <img class="brand-logo" src="img/logo.png" alt="" aria-hidden="true">
+      <span class="brand-mark" aria-hidden="true">C</span>
+      <span class="brand-name">CHASKI <b>DELIVERY</b></span>
+    </a>
+    <div class="header-actions">
+      <a class="careers-link" id="careersLink" href="#contacto" target="_blank" rel="noopener noreferrer" aria-label="Quiero trabajar en CHASKI DELIVERY. Escríbenos por WhatsApp">
+        <span>QUIERO TRABAJAR</span><b>Únete a la familia <i aria-hidden="true">↗</i></b>
+      </a>
+      <button class="menu-toggle" id="menuToggle" type="button" aria-label="Abrir menú" aria-controls="navMenu" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+    </div>
+    <nav class="nav" id="navMenu" aria-label="Navegación principal">
+      <a href="#inicio">Inicio</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#como-funciona">Cómo funciona</a>
+      <a class="nav-cta" href="#pedido">Solicitar envío <span aria-hidden="true">↗</span></a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <main id="contenido">
+    <section class="hero section-wrap" aria-labelledby="hero-title">
+      <div class="hero-copy reveal">
+        <span class="eyebrow"><span class="status-dot" aria-hidden="true"></span> LOGÍSTICA CON INTENCIÓN</span>
+        <h1 id="hero-title">TU NEGOCIO AVANZA.<br><span>NOSOTROS LO MOVEMOS.</span></h1>
+        <p>Soluciones de recojo y entrega diseñadas para personas y negocios que valoran su tiempo.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#pedido">Solicitar un envío <span aria-hidden="true">↗</span></a>
+          <a class="button button-outline" href="#servicios">Descubrir servicios <span aria-hidden="true">↓</span></a>
+        </div>
+        <div class="hero-coordinate"><span aria-hidden="true">01 /</span> CADA ENTREGA, BIEN COORDINADA</div>
+      </div>
+
+      <!-- Coloca la foto principal en img/portada.jpg. Se mostrará una reserva limpia si falta. -->
+      <div class="hero-visual media-frame reveal">
+        <img src="img/portada.jpg" alt="Motorizado o equipo de CHASKI DELIVERY en ruta" fetchpriority="high">
+        <div class="image-placeholder" aria-hidden="true"><span class="placeholder-cross">+</span><strong>Tu historia en movimiento</strong><small>Agrega tu fotografía en <code>img/portada.jpg</code></small></div>
+        <div class="hero-grid" aria-hidden="true"></div>
+        <div class="visual-index"><span>CHASKI</span><span>DELIVERY / 01</span></div>
+        <div class="visual-caption"><span class="caption-line" aria-hidden="true"></span> MOVEMOS LO QUE IMPORTA</div>
+      </div>
+      <a class="hero-scroll" href="#servicios"><span aria-hidden="true">↓</span> DESLIZA PARA EXPLORAR</a>
+    </section>
+
+    <section class="signal-strip" aria-label="Enfoque de servicio">
+      <div class="section-wrap signal-inner"><span>COORDINACIÓN CLARA</span><i aria-hidden="true"></i><span>ATENCIÓN CERCANA</span><i aria-hidden="true"></i><span>ENTREGAS A TU MEDIDA</span><b>CD / LIMA</b></div>
+    </section>
+
+    <section class="section section-wrap services-section" id="servicios" aria-labelledby="services-title">
+      <div class="section-heading reveal">
+        <div><span class="eyebrow">01 — SERVICIOS</span><h2 id="services-title">Una solución para<br>cada movimiento.</h2></div>
+        <p>Cuéntanos qué necesitas mover. Coordinamos cada recojo y destino según los detalles de tu solicitud.</p>
+      </div>
+      <div class="service-grid">
+        <article class="service-card reveal">
+          <!-- Foto del servicio 1: img/servicio-1.jpg -->
+          <div class="service-image media-frame"><img src="img/servicio-1.jpg" alt="Pedido o compra lista para entregar" loading="lazy"><div class="image-placeholder" aria-hidden="true"><span class="placeholder-cross">+</span><small>img/servicio-1.jpg</small></div><span class="service-number">01</span></div>
+          <div class="service-body"><span class="service-kicker">PERSONAS</span><h3>Pedidos y compras</h3><p>Recojo y entrega de pedidos, compras y encargos coordinados.</p><button class="text-button service-select" type="button" data-service="Pedidos y compras">Solicitar este servicio <span aria-hidden="true">↗</span></button></div>
+        </article>
+        <article class="service-card reveal">
+          <!-- Foto del servicio 2: img/servicio-2.jpg -->
+          <div class="service-image media-frame"><img src="img/servicio-2.jpg" alt="Paquete o documentos preparados para el recojo" loading="lazy"><div class="image-placeholder" aria-hidden="true"><span class="placeholder-cross">+</span><small>img/servicio-2.jpg</small></div><span class="service-number">02</span></div>
+          <div class="service-body"><span class="service-kicker">ENCOMIENDAS</span><h3>Paquetes y documentos</h3><p>Traslado de paquetes y documentos con indicaciones claras.</p><button class="text-button service-select" type="button" data-service="Paquetes y documentos">Solicitar este servicio <span aria-hidden="true">↗</span></button></div>
+        </article>
+        <article class="service-card reveal">
+          <div class="service-image service-image-abstract media-frame"><img src="img/pokeman/banner-pokeman.jpg" alt="Especialidades de POKEMAN SUSHI" loading="lazy"><div class="image-placeholder pokeman-card-placeholder" aria-hidden="true"><span class="pokeman-card-mark">PS</span><strong>POKEMAN SUSHI</strong><small>Makis, rolls y combos</small><code>img/pokeman/banner-pokeman.jpg</code></div><span class="service-number">03</span></div>
+          <div class="service-body"><span class="service-kicker">SUSHI & MAKIS</span><h3>POKEMAN SUSHI</h3><p>Combos y rolls preparados para compartir y disfrutar.</p><button class="text-button" id="openPokemanStore" type="button">Ver catálogo POKEMAN <span aria-hidden="true">↗</span></button></div>
+        </article>
+        <article class="service-card reveal">
+          <div class="service-image service-image-abstract media-frame">
+            <img src="img/mar-de-limon/banner.jpg" alt="Portada de MAR DE LIMÓN" loading="lazy">
+            <div class="image-placeholder mar-card-placeholder" aria-hidden="true">
+              <span class="mar-card-mark">ML</span><strong>MAR DE LIMÓN</strong>
+              <small>Ceviches, pescados y cocina nikkei</small><code>img/mar-de-limon/banner.jpg</code>
+            </div>
+            <span class="service-number">04</span>
+          </div>
+          <div class="service-body"><span class="service-kicker">MARISCOS & COCINA NIKKEI</span><h3>MAR DE LIMÓN</h3><p>Ceviches, pescados, cocina criolla y makis para disfrutar.</p><button class="text-button" id="openMarDeLimonStore" type="button">Ver catálogo MAR DE LIMÓN <span aria-hidden="true">↗</span></button></div>
+        </article>
+        <article class="service-card reveal">
+          <!-- Foto del servicio 4: img/servicio-4.jpg -->
+          <div class="service-image media-frame"><img src="img/servicio-4.jpg" alt="Recojo personalizado coordinado con el cliente" loading="lazy"><div class="image-placeholder" aria-hidden="true"><span class="placeholder-cross">+</span><small>img/servicio-4.jpg</small></div><span class="service-number">05</span></div>
+          <div class="service-body"><span class="service-kicker">A TU MEDIDA</span><h3>Recojos personalizados</h3><p>Un encargo específico, conversado según tus necesidades.</p><button class="text-button service-select" type="button" data-service="Recojo y entrega personalizados">Solicitar este servicio <span aria-hidden="true">↗</span></button></div>
+        </article>
+      </div>
+      <p class="section-footnote"><span aria-hidden="true">*</span> Tarifas, cobertura y disponibilidad se coordinan según cada solicitud.</p>
+    </section>
+
+    <dialog class="pokeman-dialog" id="pokemanDialog" aria-labelledby="pokemanTitle">
+      <div class="pokeman-shell">
+        <header class="pokeman-topbar">
+          <a class="pokeman-brand" href="#pokemanTitle" aria-label="POKEMAN SUSHI, inicio del catálogo"><span class="pokeman-brand-mark" aria-hidden="true">PS</span><span>POKEMAN <b>SUSHI</b></span></a>
+          <button class="pokeman-close" type="button" data-pokeman-close aria-label="Volver a CHASKI DELIVERY">Volver a CHASKI <span aria-hidden="true">×</span></button>
+        </header>
+        <section class="pokeman-hero" aria-labelledby="pokemanTitle">
+          <div class="pokeman-banner">
+            <img id="pokemanBannerImage" alt="" aria-hidden="true">
+            <div class="pokeman-banner-placeholder" id="pokemanBannerPlaceholder"><span class="pokeman-banner-mark" aria-hidden="true">PS</span><span>ESPACIO PARA LA FOTOGRAFÍA DE POKEMAN SUSHI</span><code>img/pokeman/banner-pokeman.jpg</code></div>
+            <div class="pokeman-banner-shade"></div>
+            <div class="pokeman-hero-copy"><span class="eyebrow">CATÁLOGO EXCLUSIVO / CUSCO</span><h1 id="pokemanTitle">POKEMAN<br><span>SUSHI</span></h1><p>Makis y rolls para disfrutar cada momento.</p></div>
+          </div>
+        </section>
+        <nav class="pokeman-category-nav" aria-label="Categorías del catálogo">
+          <a href="#pokemanCombos">Combos <span>06</span></a>
+          <a href="#pokemanMakis">Makis y rolls <span>12</span></a>
+          <a href="#pokemanOrder">Tu pedido <span id="pokemanCartCount">0</span></a>
+        </nav>
+        <main class="pokeman-content">
+          <section class="pokeman-category" id="pokemanCombos" aria-labelledby="pokemanCombosTitle">
+            <div class="pokeman-section-heading"><div><span class="eyebrow">01 — PARA COMPARTIR</span><h2 id="pokemanCombosTitle">Combos</h2></div><p>Sabores a elección: escribe los sabores reales que quieres. Si tienes dudas, coordínalos con el equipo.</p></div>
+            <div class="pokeman-product-grid" id="pokemanComboProducts"></div>
+          </section>
+          <section class="pokeman-category" id="pokemanMakis" aria-labelledby="pokemanMakisTitle">
+            <div class="pokeman-section-heading"><div><span class="eyebrow">02 — HECHOS PARA DISFRUTAR</span><h2 id="pokemanMakisTitle">Makis y rolls</h2></div><p>Ingredientes informados por POKEMAN SUSHI.</p></div>
+            <div class="pokeman-product-grid" id="pokemanMakiProducts"></div>
+          </section>
+          <section class="pokeman-order" id="pokemanOrder" aria-labelledby="pokemanOrderTitle">
+            <div class="pokeman-section-heading"><div><span class="eyebrow">03 — RESUMEN</span><h2 id="pokemanOrderTitle">Tu pedido</h2></div><p>Revisa cantidades, opciones y subtotal antes de continuar a WhatsApp.</p></div>
+            <div class="pokeman-order-layout">
+              <div class="pokeman-cart-panel">
+                <div class="pokeman-cart-items" id="pokemanCartItems" aria-live="polite"><p class="pokeman-empty-cart">Aún no agregas productos al pedido.</p></div>
+                <div class="pokeman-total"><span>Total</span><strong id="pokemanTotal">S/ 0.00</strong></div>
+              </div>
+              <form class="pokeman-checkout" id="pokemanCheckout">
+                <h3>Datos para coordinar</h3>
+                <label for="pokemanCustomerName">Nombre <span class="pokeman-optional">(opcional)</span><input id="pokemanCustomerName" name="nombre" autocomplete="name" placeholder="Tu nombre"></label>
+                <label for="pokemanCustomerPhone">Teléfono <span class="pokeman-optional">(opcional)</span><input id="pokemanCustomerPhone" name="telefono" type="tel" autocomplete="tel" inputmode="tel" placeholder="Tu número de contacto"></label>
+                <label for="pokemanDeliveryAddress">Dirección de entrega <span class="pokeman-optional">(opcional)</span><input id="pokemanDeliveryAddress" name="direccion" autocomplete="street-address" placeholder="Dirección o establecimiento"></label>
+                <button class="pokeman-map-button" id="pokemanChooseAddress" type="button">Elegir punto en el mapa <span aria-hidden="true">↗</span></button>
+                <label for="pokemanDeliveryReference">Referencia <span class="pokeman-optional">(opcional)</span><input id="pokemanDeliveryReference" name="referencia" placeholder="Piso, tienda cercana u otra indicación"></label>
+                <p class="pokeman-location-link" id="pokemanLocationLink" hidden></p>
+                <button class="button button-primary pokeman-whatsapp-button" id="pokemanWhatsAppOrder" type="submit" disabled>Realizar pedido por WhatsApp <span aria-hidden="true">↗</span></button>
+                <p class="pokeman-checkout-message" id="pokemanCheckoutMessage" role="status" aria-live="polite"></p>
+                <p class="pokeman-whatsapp-note">WhatsApp abrirá el mensaje para revisarlo. El pedido solo se envía cuando pulses Enviar allí.</p>
+              </form>
+            </div>
+          </section>
+        </main>
+        <footer class="pokeman-footer"><span>POKEMAN SUSHI</span><span>Pedidos coordinados por CHASKI DELIVERY</span><button type="button" data-pokeman-close>Volver al sitio</button></footer>
+      </div>
+    </dialog>
+
+    <dialog class="mar-dialog" id="marDialog" aria-labelledby="marTitle">
+      <div class="mar-shell">
+        <header class="mar-topbar">
+          <a class="mar-brand" href="#marTitle" aria-label="MAR DE LIMÓN, inicio del catálogo"><span class="mar-brand-mark" aria-hidden="true">ML</span><span>MAR DE <b>LIMÓN</b></span></a>
+          <button class="mar-close" type="button" data-mar-close>Volver a CHASKI <span aria-hidden="true">×</span></button>
+        </header>
+        <section class="mar-hero" aria-labelledby="marTitle">
+          <div class="mar-banner">
+            <img id="marBannerImage" alt="" aria-hidden="true">
+            <div class="mar-banner-placeholder" id="marBannerPlaceholder"><span class="mar-banner-mark" aria-hidden="true">ML</span><strong>MAR DE LIMÓN</strong><span>Espacio para la fotografía oficial</span><code>img/mar-de-limon/banner.jpg</code></div>
+            <div class="mar-banner-shade"></div>
+            <div class="mar-hero-copy"><span class="eyebrow">FRESCURA MARINA / COCINA NIKKEI</span><h1 id="marTitle">MAR DE<br><span>LIMÓN</span></h1><p>Ceviches, pescados, cocina criolla y makis.</p></div>
+          </div>
+        </section>
+        <nav class="mar-category-nav" id="marCategoryNav" aria-label="Categorías de MAR DE LIMÓN">
+          <a href="#mar-compartir">Para compartir</a>
+          <a href="#mar-leches">Leches</a>
+          <a href="#mar-causas">Causas</a>
+          <a href="#mar-ceviches">Ceviches</a>
+          <a href="#mar-arroces">Arroces</a>
+          <a href="#mar-marinos">Marinos</a>
+          <a href="#mar-chicharrones">Chicharrones y jaleas</a>
+          <a href="#mar-sopas">Sopas y concentrados</a>
+          <a href="#mar-criollazos">Criollazos</a>
+          <a href="#mar-pescas">Pescas del día</a>
+          <a href="#mar-duos-trios">Dúos y tríos</a>
+          <a href="#mar-kids">Menú Kids</a>
+          <a href="#mar-guarniciones">Guarniciones</a>
+          <a href="#mar-makis">Zona Nikkei — Makis</a>
+          <a href="#marOrder">Tu pedido <span id="marCartCount">0</span></a>
+        </nav>
+        <main class="mar-content">
+          <div class="mar-catalog-tools">
+            <label class="mar-search" for="marProductSearch">Buscar en el menú
+              <input id="marProductSearch" type="search" placeholder="Ej. ceviche, pulpo, maki…" autocomplete="off">
+            </label>
+            <a class="mar-cart-shortcut" href="#marOrder">Tu pedido <span id="marCartShortcutCount">0</span></a>
+          </div>
+          <div id="marCategories"></div>
+          <section class="mar-order" id="marOrder" aria-labelledby="marOrderTitle">
+            <div class="mar-section-heading"><div><span class="eyebrow">15 — RESUMEN</span><h2 id="marOrderTitle">Tu pedido</h2></div><p>Revisa tus platos y opciones antes de preparar el mensaje de WhatsApp.</p></div>
+            <div class="mar-order-layout">
+              <div class="mar-cart-panel">
+                <div class="mar-cart-items" id="marCartItems" aria-live="polite"><p class="mar-empty-cart">Aún no agregas productos al pedido.</p></div>
+                <div class="mar-total"><span>Subtotal de productos</span><strong id="marTotal">S/ 0.00</strong></div>
+                <p class="mar-delivery-note">El costo de delivery se coordina con CHASKI y no está incluido en este subtotal.</p>
+              </div>
+              <form class="mar-checkout" id="marCheckout">
+                <h3>Datos para coordinar</h3>
+                <label for="marCustomerName">Nombre <span class="mar-optional">(opcional)</span><input id="marCustomerName" name="nombre" autocomplete="name" placeholder="Tu nombre"></label>
+                <label for="marCustomerPhone">Teléfono <span class="mar-optional">(opcional)</span><input id="marCustomerPhone" name="telefono" type="tel" autocomplete="tel" inputmode="tel" placeholder="Tu número de contacto"></label>
+                <label for="marDeliveryAddress">Dirección de entrega <span class="mar-optional">(opcional)</span><input id="marDeliveryAddress" name="direccion" autocomplete="street-address" placeholder="Dirección o establecimiento"></label>
+                <button class="mar-map-button" id="marChooseAddress" type="button">Elegir punto en el mapa <span aria-hidden="true">↗</span></button>
+                <label for="marDeliveryReference">Referencia <span class="mar-optional">(opcional)</span><input id="marDeliveryReference" name="referencia" placeholder="Piso, tienda cercana u otra indicación"></label>
+                <p class="mar-location-link" id="marLocationLink" hidden></p>
+                <button class="mar-whatsapp-button" id="marWhatsAppOrder" type="submit" disabled>Preparar pedido por WhatsApp <span aria-hidden="true">↗</span></button>
+                <p class="mar-checkout-message" id="marCheckoutMessage" role="status" aria-live="polite"></p>
+                <p class="mar-whatsapp-note">WhatsApp abrirá el mensaje para revisarlo. El pedido solo se envía cuando pulses Enviar allí.</p>
+              </form>
+            </div>
+          </section>
+        </main>
+        <footer class="mar-footer"><span>MAR DE LIMÓN</span><span>Pedidos coordinados por CHASKI DELIVERY</span><button type="button" data-mar-close>Volver al sitio</button></footer>
+      </div>
+    </dialog>
+
+    <section class="about-section" id="nosotros" aria-labelledby="about-title">
+      <div class="section-wrap about-layout">
+        <div class="about-visual media-frame reveal">
+          <!-- Foto del equipo o motorizados: img/equipo.jpg -->
+          <img src="img/equipo.jpg" alt="Equipo o motorizados de CHASKI DELIVERY" loading="lazy">
+          <div class="image-placeholder" aria-hidden="true"><span class="placeholder-cross">+</span><strong>El equipo detrás de cada ruta</strong><small>Agrega tu fotografía en <code>img/equipo.jpg</code></small></div>
+          <span class="about-index">CHASKI / EQUIPO</span>
+        </div>
+        <div class="about-copy reveal"><span class="eyebrow">02 — NOSOTROS</span><h2 id="about-title">PRECISIÓN EN<br>CADA ENTREGA.</h2><p>En CHASKI DELIVERY trabajamos para conectar negocios y clientes mediante soluciones de entrega prácticas, coordinadas y adaptadas a cada necesidad.</p><p class="about-detail">Una buena entrega empieza mucho antes de salir a ruta: escuchamos, coordinamos y cuidamos cada detalle del encargo.</p><a href="#pedido" class="text-button about-link">Conversemos sobre tu envío <span aria-hidden="true">↗</span></a></div>
+      </div>
+    </section>
+
+    <section class="steps-section section section-wrap" id="como-funciona" aria-labelledby="steps-title">
+      <div class="section-heading reveal"><div><span class="eyebrow">03 — EL PROCESO</span><h2 id="steps-title">Tres pasos.<br>Todo coordinado.</h2></div><p>La solicitud inicia una conversación para revisar los detalles antes de confirmar el servicio.</p></div>
+      <ol class="steps-grid">
+        <li class="step reveal"><span class="step-number">01</span><div><h3>Solicita tu envío</h3><p>Completa el formulario con tus datos y el tipo de encargo.</p></div></li>
+        <li class="step reveal"><span class="step-number">02</span><div><h3>Coordina recojo y destino</h3><p>Comparte direcciones y referencias para organizar el servicio.</p></div></li>
+        <li class="step reveal"><span class="step-number">03</span><div><h3>Confirma los detalles</h3><p>Revisa con el equipo la información de tu solicitud.</p></div></li>
+      </ol>
+    </section>
+
+    <section class="order-section" id="pedido" aria-labelledby="order-title">
+      <div class="section-wrap order-layout">
+        <div class="order-intro reveal"><span class="eyebrow">04 — SOLICITUD</span><h2 id="order-title">Pongamos tu envío en marcha.</h2><p>Completa los datos. Prepararemos un mensaje para que lo revises y, si está todo bien, lo envíes desde WhatsApp.</p><div class="note"><span aria-hidden="true">i</span><p>No se registra ni confirma ningún pedido en esta página. Precio, cobertura y disponibilidad se coordinan directamente.</p></div><div class="order-aside">CHASKI DELIVERY <span>COORDINACIÓN DIRECTA / 01</span></div></div>
+        <form id="orderForm" class="order-form reveal">
+          <div class="form-row">
+            <label for="nombre">Nombre completo <span>*</span><input id="nombre" type="text" name="nombre" placeholder="Nombre y apellido" required autocomplete="name"></label>
+            <label for="telefono">Teléfono de contacto <span>*</span><input id="telefono" type="tel" name="telefono" placeholder="Tu número de contacto" required autocomplete="tel" inputmode="tel"></label>
+          </div>
+          <div class="form-row location-row">
+            <section class="address-group" aria-labelledby="origenLabel">
+              <label id="origenLabel" for="origen">¿Dónde recogemos? <span>*</span></label>
+              <p class="location-help" id="origenHelp">Escribe una dirección, un lugar conocido o el nombre de un establecimiento.</p>
+              <input id="origen" type="text" name="origen" placeholder="Ej. mercado, tienda o avenida" required autocomplete="street-address" aria-describedby="origenHelp origenLocationStatus">
+              <button class="button button-outline location-map-open" type="button" data-map-open="origen">Elegir ubicación en el mapa</button>
+              <label class="location-reference-label" for="origenReferencia">Referencia <span class="optional">(opcional)</span></label>
+              <input class="location-reference" id="origenReferencia" type="text" name="origenReferencia" placeholder="Número, piso, tienda cercana o indicaciones">
+              <input type="hidden" name="origenCoordenadas" id="origenCoordenadas">
+              <input type="hidden" name="origenMapa" id="origenMapa">
+              <p class="location-status" id="origenLocationStatus" role="status" aria-live="polite"></p>
+              <article class="selected-location-card" id="origenSelectedCard" hidden aria-label="Ubicación de recojo seleccionada">
+                <div class="selected-location-copy"><strong class="selected-location-address" id="origenSelectedAddress"></strong><small class="selected-location-details" id="origenSelectedDetails"></small></div>
+                <div class="selected-location-actions"><button type="button" data-selected-location-action="change" data-location-field="origen">Cambiar ubicación</button><button type="button" data-selected-location-action="delete" data-location-field="origen">Eliminar ubicación</button></div>
+              </article>
+            </section>
+            <section class="address-group" aria-labelledby="destinoLabel">
+              <label id="destinoLabel" for="destino">¿Dónde entregamos? <span>*</span></label>
+              <p class="location-help" id="destinoHelp">Escribe una dirección, un lugar conocido o el nombre de un establecimiento.</p>
+              <input id="destino" type="text" name="destino" placeholder="Ej. mercado, tienda o avenida" required autocomplete="street-address" aria-describedby="destinoHelp destinoLocationStatus">
+              <button class="button button-outline location-map-open" type="button" data-map-open="destino">Elegir ubicación en el mapa</button>
+              <label class="location-reference-label" for="destinoReferencia">Referencia <span class="optional">(opcional)</span></label>
+              <input class="location-reference" id="destinoReferencia" type="text" name="destinoReferencia" placeholder="Número, piso, tienda cercana o indicaciones">
+              <input type="hidden" name="destinoCoordenadas" id="destinoCoordenadas">
+              <input type="hidden" name="destinoMapa" id="destinoMapa">
+              <p class="location-status" id="destinoLocationStatus" role="status" aria-live="polite"></p>
+              <article class="selected-location-card" id="destinoSelectedCard" hidden aria-label="Ubicación de destino seleccionada">
+                <div class="selected-location-copy"><strong class="selected-location-address" id="destinoSelectedAddress"></strong><small class="selected-location-details" id="destinoSelectedDetails"></small></div>
+                <div class="selected-location-actions"><button type="button" data-selected-location-action="change" data-location-field="destino">Cambiar ubicación</button><button type="button" data-selected-location-action="delete" data-location-field="destino">Eliminar ubicación</button></div>
+              </article>
+            </section>
+          </div>
+          <label for="serviceSelect">Tipo de servicio <span>*</span>
+            <select name="servicio" id="serviceSelect" required>
+              <option value="">Selecciona una opción</option>
+              <option>Pedidos y compras</option>
+              <option>Paquetes y documentos</option>
+              <option>POKEMAN SUSHI</option>
+              <option>MAR DE LIMÓN</option>
+              <option>Recojo y entrega personalizados</option>
+            </select>
+          </label>
+          <label for="descripcion">Descripción del paquete o encargo <span>*</span><textarea id="descripcion" name="descripcion" rows="3" placeholder="¿Qué debemos recoger o entregar?" required></textarea></label>
+          <label for="indicaciones">Indicaciones adicionales <span class="optional">(opcional)</span><textarea id="indicaciones" name="indicaciones" rows="2" placeholder="Referencias u otros detalles que debamos conocer"></textarea></label>
+          <button type="submit" class="button button-primary form-submit">Preparar mi solicitud <span aria-hidden="true">↗</span></button>
+          <p class="form-help">WhatsApp abrirá el mensaje para revisarlo. Solo llegará a CHASKI cuando pulses Enviar dentro de WhatsApp.</p>
+          <p id="formMessage" class="form-message" role="status" aria-live="polite" tabindex="-1"></p>
+        </form>
+      </div>
+      <dialog class="location-dialog" id="locationDialog" aria-labelledby="locationDialogTitle">
+        <div class="location-dialog-shell">
+          <header class="location-dialog-header">
+            <div><span class="eyebrow">SELECCIÓN DE UBICACIÓN</span><h2 id="locationDialogTitle">Elegir ubicación</h2><p id="locationDialogFieldLabel">Selecciona el punto en el mapa.</p></div>
+            <button class="location-dialog-close" type="button" data-location-dialog-close aria-label="Cerrar mapa">×</button>
+          </header>
+          <div class="map-search" role="search">
+            <label for="mapSearchInput">Buscar una dirección o lugar</label>
+            <div class="map-search-controls"><input id="mapSearchInput" type="search" placeholder="Calle, urbanización, mercado o tienda" autocomplete="off"><button class="button button-primary" id="mapSearchButton" type="button">Buscar</button></div>
+            <ul class="map-search-results" id="mapSearchResults" aria-label="Resultados de búsqueda" hidden></ul>
+          </div>
+          <div class="map-toolbar">
+            <button class="location-gps" id="mapUseCurrentLocation" type="button">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+              Usar mi ubicación actual
+            </button>
+            <span id="mapCoordinatesPreview">Busca un lugar, usa GPS o mueve el mapa.</span>
+          </div>
+          <p class="map-status" id="mapStatus" role="status" aria-live="polite">Busca una dirección, usa el GPS o toca el mapa para marcar el punto.</p>
+          <p class="map-privacy-note">Mapa interactivo de OpenStreetMap. El área roja indica la cobertura aproximada de CHASKI.</p>
+          <details class="map-reference">
+            <summary>Ver mapa de referencia de San Sebastián en Google Maps</summary>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d43016.807627132905!2d-71.95925082543936!3d-13.528232553071263!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x916e7f4f64997d8f%3A0x92022dce95b80741!2sSan%20Sebasti%C3%A1n%2008004!5e1!3m2!1ses!2spe!4v1794621431826!5m2!1ses!2spe" title="Mapa de referencia de San Sebastián, Cusco" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+          </details>
+          <div class="location-map-wrap">
+            <div id="locationMap" class="location-map" role="application" aria-label="Mapa interactivo para seleccionar una ubicación y ver la zona de cobertura de CHASKI"></div>
+          </div>
+          <footer class="location-dialog-footer"><button class="button button-outline" type="button" data-location-dialog-close>Volver al formulario</button><button class="button button-primary" id="confirmMapLocation" type="button" disabled>CONFIRMAR UBICACIÓN</button></footer>
+        </div>
+      </dialog>
+    </section>
+
+    <section class="contact-band" id="contacto" aria-labelledby="contact-title"><div class="section-wrap contact-inner"><div class="reveal"><span class="eyebrow">05 — CONTACTO</span><h2 id="contact-title">Tu próxima entrega<br>empieza conversando.</h2></div><a class="button button-outline contact-link reveal" id="contactWhatsApp" href="#pedido">Consultar por WhatsApp <span aria-hidden="true">↗</span></a></div></section>
+  </main>
+
+  <footer class="footer"><div class="section-wrap footer-inner"><a class="brand brand-footer" href="#inicio" aria-label="CHASKI DELIVERY, volver al inicio"><span class="brand-mark" aria-hidden="true">C</span><span class="brand-name">CHASKI <b>DELIVERY</b></span></a><p>© <span id="year"></span> CHASKI DELIVERY. Hecho para avanzar.</p><a href="#inicio" class="back-top">Volver al inicio <span aria-hidden="true">↑</span></a></div></footer>
+</body>
+</html>

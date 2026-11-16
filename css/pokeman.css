@@ -1,0 +1,154 @@
+.pokeman-dialog {
+  width: min(1260px, calc(100vw - 28px));
+  max-width: none;
+  max-height: calc(100dvh - 24px);
+  padding: 0;
+  overflow: auto;
+  border: 1px solid rgba(245, 245, 245, .16);
+  background: #080808;
+  color: #F5F5F5;
+  scrollbar-color: #8B0000 #121212;
+}
+
+.pokeman-dialog::backdrop { background: rgba(0, 0, 0, .86); backdrop-filter: blur(5px); }
+.pokeman-card-placeholder { gap: 5px; background: radial-gradient(ellipse at center, rgba(139, 0, 0, .25), transparent 62%), linear-gradient(145deg, #1C1C1C, #080808); }
+.pokeman-card-placeholder strong { position: relative; z-index: 1; color: #F5F5F5; font: 700 24px/1 'Barlow Condensed', Impact, sans-serif; letter-spacing: .8px; }
+.pokeman-card-placeholder small, .pokeman-card-placeholder code { position: relative; z-index: 1; color: #A6A6A6; font-size: 9px; }
+.pokeman-card-mark { position: relative; z-index: 1; width: 38px; height: 38px; color: #E10600; font-size: 18px; }
+.pokeman-shell { min-height: 100%; }
+.pokeman-topbar { position: sticky; z-index: 10; top: 0; display: flex; min-height: 66px; align-items: center; justify-content: space-between; gap: 15px; padding: 10px clamp(16px, 4vw, 48px); border-bottom: 1px solid rgba(245, 245, 245, .12); background: rgba(8, 8, 8, .96); backdrop-filter: blur(14px); }
+.pokeman-brand { display: inline-flex; align-items: center; gap: 10px; color: #F5F5F5; font: 700 19px/1 'Barlow Condensed', Impact, sans-serif; letter-spacing: .6px; }
+.pokeman-brand b { color: #A6A6A6; font-weight: 500; }
+.pokeman-brand-mark, .pokeman-banner-mark, .pokeman-card-mark { display: grid; place-items: center; border: 1px solid #E10600; color: #F5F5F5; font-family: 'Barlow Condensed', Impact, sans-serif; font-weight: 800; }
+.pokeman-brand-mark { width: 34px; height: 34px; color: #E10600; font-size: 17px; }
+.pokeman-close { display: inline-flex; min-height: 40px; align-items: center; gap: 12px; padding: 8px 12px; border: 1px solid rgba(245, 245, 245, .22); background: #121212; color: #F5F5F5; cursor: pointer; font-size: 10px; font-weight: 700; letter-spacing: .6px; text-transform: uppercase; }
+.pokeman-close span { color: #E10600; font-size: 19px; }
+.pokeman-close:hover { border-color: #E10600; }
+.pokeman-hero { padding: 24px clamp(16px, 4vw, 48px) 0; }
+.pokeman-banner { position: relative; display: flex; min-height: clamp(260px, 35vw, 410px); align-items: flex-end; overflow: hidden; border: 1px solid rgba(245, 245, 245, .14); background: radial-gradient(ellipse at 72% 50%, rgba(139, 0, 0, .3), transparent 46%), linear-gradient(120deg, #1C1C1C, #080808 60%); }
+.pokeman-banner > img { position: absolute; z-index: 1; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity .3s ease; }
+.pokeman-banner.has-image > img { opacity: 1; }
+.pokeman-banner-placeholder { position: absolute; z-index: 0; inset: 0; display: flex; align-items: center; justify-content: flex-end; flex-direction: column; gap: 10px; padding: 24px; color: #A6A6A6; font-size: 9px; font-weight: 700; letter-spacing: 1.3px; text-align: center; }
+.pokeman-banner-placeholder[hidden] { display: none; }
+.pokeman-banner-placeholder::before { position: absolute; inset: 18px; border: 1px solid rgba(245, 245, 245, .08); content: ''; }
+.pokeman-banner-mark { width: 70px; height: 70px; color: #E10600; font-size: 31px; }
+.pokeman-banner-placeholder code { color: #F5F5F5; font-size: 10px; font-weight: 400; letter-spacing: 0; }
+.pokeman-banner-shade { position: absolute; z-index: 2; inset: 0; background: linear-gradient(90deg, rgba(8, 8, 8, .9), rgba(8, 8, 8, .48) 48%, rgba(8, 8, 8, .05)); pointer-events: none; }
+.pokeman-hero-copy { position: relative; z-index: 3; max-width: 620px; padding: clamp(24px, 5vw, 60px); }
+.pokeman-hero-copy .eyebrow { color: #D0D0D0; }
+.pokeman-hero-copy h1 { margin: 18px 0 12px; color: #F5F5F5; font: 800 clamp(48px, 9vw, 100px)/.79 'Barlow Condensed', Impact, sans-serif; letter-spacing: -.025em; }
+.pokeman-hero-copy h1 span { color: #E10600; }
+.pokeman-hero-copy p { margin: 0; color: #E0E0E0; font-size: clamp(13px, 2vw, 16px); }
+.pokeman-category-nav { position: sticky; z-index: 9; top: 66px; display: flex; flex-wrap: wrap; gap: 8px 24px; padding: 14px clamp(16px, 4vw, 48px); border-bottom: 1px solid rgba(245, 245, 245, .12); background: rgba(18, 18, 18, .96); backdrop-filter: blur(12px); }
+.pokeman-category-nav a { display: inline-flex; align-items: center; gap: 8px; color: #F5F5F5; font-size: 10px; font-weight: 700; letter-spacing: .7px; text-transform: uppercase; }
+.pokeman-category-nav a:hover { color: #E10600; }
+.pokeman-category-nav a span { color: #A6A6A6; font-size: 9px; }
+.pokeman-content { max-width: 1260px; margin-inline: auto; padding: 0 clamp(16px, 4vw, 48px); }
+.pokeman-category, .pokeman-order { padding-block: clamp(42px, 6vw, 72px); scroll-margin-top: 145px; }
+.pokeman-category + .pokeman-category, .pokeman-order { border-top: 1px solid rgba(245, 245, 245, .12); }
+.pokeman-section-heading { display: flex; align-items: flex-end; justify-content: space-between; gap: 22px; margin-bottom: 25px; }
+.pokeman-section-heading h2 { margin: 10px 0 0; color: #F5F5F5; font: 700 clamp(35px, 5vw, 54px)/.95 'Barlow Condensed', Impact, sans-serif; text-transform: uppercase; }
+.pokeman-section-heading > p { max-width: 390px; margin: 0 0 4px; color: #A6A6A6; font-size: 12px; line-height: 1.7; }
+.pokeman-product-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 17px; }
+.pokeman-product-card { display: flex; min-width: 0; flex-direction: column; overflow: hidden; border: 1px solid rgba(245, 245, 245, .12); border-radius: 4px; background: #121212; box-shadow: 0 12px 28px rgba(0, 0, 0, .18); transition: transform .22s ease, border-color .22s ease, box-shadow .22s ease; }
+.pokeman-product-card:hover { transform: translateY(-3px); border-color: rgba(225, 6, 0, .58); box-shadow: 0 17px 34px rgba(0, 0, 0, .32); }
+.pokeman-product-photo { position: relative; display: grid; aspect-ratio: 1.62 / 1; min-height: 150px; place-items: center; overflow: hidden; border-bottom: 1px solid rgba(245, 245, 245, .1); background: radial-gradient(ellipse at 50% 52%, rgba(139, 0, 0, .24), transparent 55%), linear-gradient(145deg, #1C1C1C, #0C0C0C); }
+.pokeman-product-photo::before, .pokeman-product-photo::after { position: absolute; width: 125%; height: 1px; background: rgba(245, 245, 245, .08); content: ''; transform: rotate(-18deg); }
+.pokeman-product-photo::after { transform: rotate(18deg); }
+.pokeman-product-photo img { position: absolute; z-index: 2; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity .3s ease, transform .5s ease; }
+.pokeman-product-photo.has-image img { opacity: 1; }
+.pokeman-product-card:hover .pokeman-product-photo.has-image img { transform: scale(1.025); }
+.pokeman-photo-placeholder { position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; gap: 7px; padding: 16px; color: #A6A6A6; font-size: 9px; text-align: center; }
+.pokeman-photo-placeholder[hidden] { display: none; }
+.pokeman-photo-placeholder strong { color: #F5F5F5; font: 600 19px/1 'Barlow Condensed', Impact, sans-serif; letter-spacing: .6px; }
+.pokeman-photo-placeholder code { color: #A6A6A6; font-size: 9px; overflow-wrap: anywhere; }
+.pokeman-photo-mark { color: #E10600; font: 800 27px/1 'Barlow Condensed', Impact, sans-serif; }
+.pokeman-product-number { position: absolute; z-index: 3; top: 10px; right: 10px; padding: 5px 7px; border: 1px solid rgba(245, 245, 245, .22); background: rgba(8, 8, 8, .8); color: #F5F5F5; font-size: 9px; letter-spacing: .8px; }
+.pokeman-product-info { display: flex; flex: 1; flex-direction: column; padding: 17px; }
+.pokeman-product-type { color: #E10600; font-size: 8px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; }
+.pokeman-product-title-row { display: flex; align-items: flex-start; justify-content: space-between; gap: 10px; margin-top: 8px; }
+.pokeman-product-title-row h3 { margin: 0; color: #F5F5F5; font: 700 22px/1 'Barlow Condensed', Impact, sans-serif; letter-spacing: .1px; }
+.pokeman-product-price { flex: 0 0 auto; color: #E10600; font: 700 19px/1 'Barlow Condensed', Impact, sans-serif; white-space: nowrap; }
+.pokeman-product-description { min-height: 55px; margin: 11px 0 14px; color: #B6B6B6; font-size: 11px; line-height: 1.65; }
+.pokeman-product-controls { display: grid; gap: 10px; margin-top: auto; }
+.pokeman-option-group { display: grid; gap: 5px; }
+.pokeman-option-group > span, .pokeman-quantity-label { color: #E0E0E0; font-size: 9px; font-weight: 600; }
+.pokeman-option-group input, .pokeman-option-group select, .pokeman-quantity-label input { width: 100%; min-width: 0; min-height: 37px; padding: 8px 9px; border: 1px solid rgba(245, 245, 245, .16); border-radius: 2px; outline: none; background: #080808; color: #F5F5F5; font: 11px 'DM Sans', 'Segoe UI', sans-serif; }
+.pokeman-option-group input:focus, .pokeman-option-group select:focus, .pokeman-quantity-label input:focus { border-color: #E10600; outline: 2px solid rgba(225, 6, 0, .42); outline-offset: 1px; }
+.pokeman-option-group input::placeholder { color: #888; }
+.pokeman-quantity-row { display: grid; grid-template-columns: minmax(80px, .55fr) 1fr; align-items: end; gap: 10px; }
+.pokeman-quantity-label { display: grid; gap: 5px; }
+.pokeman-quantity-label input { width: 100%; }
+.pokeman-add-button { width: 100%; min-height: 38px; padding: 8px 11px; border: 1px solid #E10600; background: #E10600; color: #FFF; cursor: pointer; font-size: 9px; font-weight: 700; letter-spacing: .65px; text-transform: uppercase; transition: background .2s ease, border-color .2s ease; }
+.pokeman-add-button:hover { border-color: #8B0000; background: #8B0000; }
+.pokeman-product-subtotal { min-height: 15px; color: #A6A6A6; font-size: 9px; text-align: right; }
+.pokeman-order-layout { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(275px, .85fr); align-items: start; gap: 20px; }
+.pokeman-cart-panel, .pokeman-checkout { min-width: 0; border: 1px solid rgba(245, 245, 245, .13); background: #121212; }
+.pokeman-cart-items { display: grid; gap: 0; }
+.pokeman-empty-cart { margin: 0; padding: 24px; color: #A6A6A6; font-size: 12px; }
+.pokeman-cart-item { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 10px; padding: 16px; border-bottom: 1px solid rgba(245, 245, 245, .1); }
+.pokeman-cart-item h4 { margin: 0 0 5px; color: #F5F5F5; font: 600 18px/1 'Barlow Condensed', Impact, sans-serif; }
+.pokeman-cart-item p { margin: 0; color: #A6A6A6; font-size: 10px; line-height: 1.55; overflow-wrap: anywhere; }
+.pokeman-cart-item-price { color: #E10600; font: 700 18px/1 'Barlow Condensed', Impact, sans-serif; white-space: nowrap; }
+.pokeman-cart-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 7px; margin-top: 10px; }
+.pokeman-cart-actions button { min-width: 28px; min-height: 28px; padding: 4px 8px; border: 1px solid rgba(245, 245, 245, .22); background: #080808; color: #F5F5F5; cursor: pointer; font-size: 10px; }
+.pokeman-cart-actions button:hover:not(:disabled) { border-color: #E10600; color: #FFF; }
+.pokeman-cart-actions button:disabled { cursor: not-allowed; opacity: .45; }
+.pokeman-cart-actions .pokeman-remove-button { margin-left: 4px; border-color: rgba(225, 6, 0, .5); color: #F5F5F5; }
+.pokeman-total { display: flex; align-items: center; justify-content: space-between; gap: 15px; padding: 18px 16px; color: #F5F5F5; font-size: 12px; font-weight: 700; text-transform: uppercase; }
+.pokeman-total strong { color: #E10600; font: 700 25px/1 'Barlow Condensed', Impact, sans-serif; }
+.pokeman-checkout { display: grid; gap: 12px; padding: 18px; }
+.pokeman-checkout h3 { margin: 0 0 3px; color: #F5F5F5; font: 700 24px/1 'Barlow Condensed', Impact, sans-serif; text-transform: uppercase; }
+.pokeman-checkout label { display: grid; gap: 5px; color: #E0E0E0; font-size: 9px; font-weight: 600; }
+.pokeman-optional { color: #A6A6A6; font-size: 9px; font-weight: 400; }
+.pokeman-checkout input { width: 100%; min-height: 40px; padding: 9px 10px; border: 1px solid rgba(245, 245, 245, .16); border-radius: 2px; background: #080808; color: #F5F5F5; font: 11px 'DM Sans', 'Segoe UI', sans-serif; }
+.pokeman-checkout input:focus { border-color: #E10600; outline: 2px solid rgba(225, 6, 0, .42); outline-offset: 1px; }
+.pokeman-checkout input::placeholder { color: #888; }
+.pokeman-map-button { justify-self: start; padding: 0 0 3px; border: 0; border-bottom: 1px solid rgba(225, 6, 0, .7); background: transparent; color: #F5F5F5; cursor: pointer; font-size: 9px; font-weight: 700; text-transform: uppercase; }
+.pokeman-map-button span { color: #E10600; }
+.pokeman-location-link { margin: -5px 0 0; color: #A6A6A6; font-size: 9px; line-height: 1.5; overflow-wrap: anywhere; }
+.pokeman-location-link[hidden] { display: none; }
+.pokeman-location-link a { color: #F5F5F5; text-decoration: underline; }
+.pokeman-whatsapp-button { width: 100%; justify-content: space-between; margin-top: 3px; }
+.pokeman-whatsapp-button:disabled { cursor: not-allowed; opacity: .5; transform: none; }
+.pokeman-checkout-message { display: none; margin: 0; padding: 10px; border-left: 2px solid #E10600; background: #080808; color: #F5F5F5; font-size: 10px; line-height: 1.55; }
+.pokeman-checkout-message.is-visible { display: block; }
+.pokeman-whatsapp-note { margin: 0; color: #A6A6A6; font-size: 9px; line-height: 1.55; }
+.pokeman-footer { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; padding: 18px clamp(16px, 4vw, 48px); border-top: 1px solid rgba(245, 245, 245, .12); background: #121212; color: #A6A6A6; font-size: 9px; }
+.pokeman-footer > span:first-child { color: #F5F5F5; font-weight: 700; letter-spacing: 1px; }
+.pokeman-footer button { padding: 5px 0; border: 0; border-bottom: 1px solid #8B0000; background: transparent; color: #F5F5F5; cursor: pointer; font-size: 9px; }
+.pokeman-dialog :focus-visible { outline: 2px solid #E10600; outline-offset: 3px; }
+.pokeman-dialog :target { scroll-margin-top: 145px; }
+
+@media (max-width: 900px) {
+  .pokeman-product-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .pokeman-order-layout { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 620px) {
+  .pokeman-dialog { width: calc(100vw - 12px); max-height: calc(100dvh - 12px); }
+  .pokeman-topbar { min-height: 58px; padding-inline: 12px; }
+  .pokeman-brand { font-size: 17px; }
+  .pokeman-close { min-height: 36px; padding: 6px 9px; font-size: 8px; }
+  .pokeman-category-nav { top: 58px; gap: 8px 14px; padding: 12px; }
+  .pokeman-category-nav a { font-size: 8px; }
+  .pokeman-hero { padding: 12px 12px 0; }
+  .pokeman-banner { min-height: 260px; }
+  .pokeman-hero-copy { padding: 22px; }
+  .pokeman-hero-copy h1 { font-size: clamp(55px, 15vw, 75px); }
+  .pokeman-content { padding-inline: 12px; }
+  .pokeman-category, .pokeman-order { padding-block: 38px; scroll-margin-top: 116px; }
+  .pokeman-section-heading { display: block; margin-bottom: 20px; }
+  .pokeman-section-heading > p { margin-top: 12px; }
+  .pokeman-product-grid { grid-template-columns: 1fr; gap: 13px; }
+  .pokeman-product-photo { aspect-ratio: 1.85 / 1; min-height: 160px; }
+  .pokeman-product-info { padding: 15px; }
+  .pokeman-product-description { min-height: 0; }
+  .pokeman-cart-item { padding: 13px; }
+  .pokeman-checkout { padding: 15px; }
+  .pokeman-footer { align-items: flex-start; flex-direction: column; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pokeman-product-card, .pokeman-product-photo img, .pokeman-banner > img { transition: none; }
+}
