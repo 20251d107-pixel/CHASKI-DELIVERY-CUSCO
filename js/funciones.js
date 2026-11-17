@@ -556,10 +556,6 @@ document.addEventListener("DOMContentLoaded", () => {
     if (image.complete && image.naturalWidth > 0) markLoaded();
   });
 
-  const logo = document.querySelector(".brand-logo");
-  logo.addEventListener("load", () => logo.closest(".brand").classList.add("has-logo"), { once: true });
-  if (logo.complete && logo.naturalWidth > 0) logo.closest(".brand").classList.add("has-logo");
-
   const revealItems = document.querySelectorAll(".reveal");
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   if ("IntersectionObserver" in window && !reduceMotion) {

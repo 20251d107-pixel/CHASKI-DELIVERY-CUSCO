@@ -1,0 +1,27 @@
+POKEMAN SUSHI - fotografías del catálogo
+
+Copia aquí una fotografía JPG para el banner y otra, distinta, para cada producto:
+
+- banner-pokeman.jpg
+- maki-12-piezas.jpg
+- acevichado-2-furay.jpg
+- makis-24-piezas.jpg
+- makis-36-piezas.jpg
+- makis-48-piezas.jpg
+- makis-60-piezas.jpg
+- acevichado-2-0.jpg
+- pulpo-acevichado.jpg
+- pulpo-al-olivo.jpg
+- california-roll.jpg
+- philadelphia-roll.jpg
+- king-kong-roll.jpg
+- furay-frito.jpg
+- furay-acevichado.jpg
+- guacamole-frito.jpg
+- spicy-baby.jpg
+- parrillero.jpg
+- dragon-roll.jpg
+
+Usa exactamente estos nombres y la extensión .jpg. Mientras no exista una foto,
+el catálogo muestra un marcador de posición propio del producto. No se usan
+fotos de otros platos ni imágenes genéricas como si fueran fotos de la tienda.

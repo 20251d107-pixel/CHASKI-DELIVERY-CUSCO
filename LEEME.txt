@@ -1,0 +1,66 @@
+CHASKI DELIVERY - página web editable
+
+CONTENIDO
+- index.html: secciones, textos y rutas de imágenes.
+- css/estilos.css: identidad visual, componentes y adaptación a móviles.
+- js/funciones.js: menú, selección de servicios, validación y WhatsApp.
+- img/: fotografías propias de CHASKI DELIVERY y sus catálogos.
+
+CÓMO ABRIR
+1. Extrae la carpeta del ZIP.
+2. Abre la carpeta "chaski_delivery_web" en Visual Studio Code.
+3. Inicia un servidor local desde esta carpeta y abre la dirección que indique:
+   - En Visual Studio Code, usa la opción "Open with Live Server"; o
+   - En una terminal abierta en la carpeta del proyecto, ejecuta `python -m http.server 8000`
+     y abre `http://localhost:8000`.
+   No abras index.html directamente con `file://`: los módulos JavaScript y algunas funciones
+   del navegador requieren HTTP o HTTPS.
+
+CÓMO AÑADIR FOTOS
+Copia tus fotos dentro de img/ con estos nombres:
+- portada.jpg
+- servicio-1.jpg
+- servicio-2.jpg
+- servicio-4.jpg
+- equipo.jpg
+
+Puedes usar .png o .webp, pero si cambias la extensión/nombre, actualiza también el src correspondiente en index.html.
+Si todavía no tienes una foto, aparecerá un recuadro de ayuda en su lugar.
+
+CÓMO ACTIVAR WHATSAPP
+1. Abre js/funciones.js.
+2. Busca la variable WHATSAPP_NUMBER, al inicio del archivo.
+3. Escribe ahí el número real de la empresa, con código de país y solo dígitos.
+   Ejemplo de formato peruano: 51 seguido del número celular; no pongas +, espacios ni guiones.
+4. Guarda y prueba el formulario. WhatsApp se abrirá con el mensaje preparado para revisar y enviar.
+   Mientras la variable esté vacía, el sitio avisará que falta configurar y no abrirá un número de ejemplo.
+   El enlace "Quiero trabajar" del encabezado usa el mismo número comercial y prepara un mensaje para consultas de trabajo.
+
+IMPORTANTE
+- Los botones de navegación desplazan a sus secciones.
+- Los botones de cada servicio seleccionan ese servicio en el formulario.
+- El formulario solicita nombre, teléfono, recojo, destino, servicio y descripción; las indicaciones son opcionales.
+- El formulario prepara el mensaje de WhatsApp; no guarda pedidos en una base de datos ni los envía automáticamente.
+- Para recibir pedidos en un sistema propio o guardar datos, necesitarás un backend o servicio de formularios.
+- La tarjeta de negocios abre el catálogo propio de POKEMAN SUSHI; los demás servicios permanecen disponibles.
+- El catálogo incluye combos, makis, carrito y preparación de pedidos por WhatsApp. El mensaje queda pendiente de revisión y envío por el cliente.
+
+CATÁLOGO POKEMAN SUSHI
+- Agrega el banner en `img/pokeman/banner-pokeman.jpg` y las 18 fotos individuales con los nombres indicados en `img/pokeman/LEEME.txt`.
+- Si las fotografías no se han agregado todavía, aparecen marcadores de posición; cuando se copien los JPG con esos nombres, el sitio los mostrará automáticamente.
+- Los sabores de los combos se escriben libremente porque POKEMAN no proporcionó una lista de sabores. Las alternativas incluidas para los combos de 36, 48 y 60 piezas sí se muestran en un selector.
+- Desde el resumen del pedido se puede elegir la ubicación de entrega con el mapa existente de CHASKI. La dirección, referencia y enlace al mapa se incluyen si se proporcionan.
+- Abre el proyecto con Live Server o desde `http://localhost`/`https://`; los módulos JavaScript y el GPS no funcionan correctamente al abrir el HTML directamente como archivo local.
+
+CATÁLOGO MAR DE LIMÓN
+- La tarjeta de MAR DE LIMÓN aparece junto a POKEMAN SUSHI y abre el catálogo independiente con 14 categorías, búsqueda, opciones de platos, carrito y pedido por WhatsApp.
+- El menú incluye los productos, precios y personalizaciones especificados en `js/mar-de-limon.js`. Los productos no tienen descripciones inventadas.
+- Las fotografías reales se pueden agregar en `img/mar-de-limon/banner.jpg` y en las carpetas y rutas descritas en `img/mar-de-limon/LEEME.txt`. Cada producto tiene una ruta de imagen independiente; los makis usan una imagen diferente para cada sabor. Mientras no existan fotos, se muestra un marcador de posición.
+- El carrito calcula el subtotal de productos. El costo de delivery se coordina con CHASKI y se excluye del subtotal porque este proyecto no cuenta con una tarifa automática de delivery.
+- El checkout de MAR DE LIMÓN reutiliza el número comercial configurado por CHASKI y el mapa de destino existente. WhatsApp abre un mensaje para revisar y enviar; la página no afirma que el pedido se haya recibido.
+
+MAPA Y SELECCIÓN DE UBICACIÓN
+- El selector usa Leaflet y los mosaicos de OpenStreetMap; buscar y traducir coordenadas a direcciones usa el servicio público de Nominatim. No requiere una clave de Google Maps.
+- Se necesita conexión a internet para cargar Leaflet, el mapa y las búsquedas. El GPS requiere permiso del navegador y HTTPS (localhost también funciona).
+- El mapa de Google de San Sebastián está disponible como referencia visual. Por las restricciones del iframe de Google, la selección de puntos se realiza en el mapa interactivo de OpenStreetMap.
+- Recojo y destino guardan su propia dirección, coordenadas y enlace de Google Maps. El destino se comprueba por coordenadas contra el polígono de cobertura; la selección de recojo no queda bloqueada por ese límite. El formulario principal y ambos catálogos incluyen en el mensaje de WhatsApp el destino seleccionado, coordenadas y enlace; el cliente debe pulsar Enviar en WhatsApp.

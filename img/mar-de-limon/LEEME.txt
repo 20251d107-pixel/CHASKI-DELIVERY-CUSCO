@@ -1,0 +1,126 @@
+MAR DE LIMON — NOMBRES DE FOTOGRAFIAS
+
+Guarda las fotos JPG con estos nombres directamente dentro de esta carpeta:
+img/mar-de-limon/
+
+El catalogo las busca automaticamente por nombre. Si tambien conservas la
+organizacion por subcarpetas, el catalogo prueba primero esta carpeta y luego
+la subcarpeta correspondiente. No hace falta editar el HTML ni el JavaScript.
+Usa fotos propias y correctas para cada plato; si una imagen aun no existe,
+seguira apareciendo el marcador de posicion.
+
+PORTADA DEL RESTAURANTE
+- banner.jpg
+
+PARA COMPARTIR
+- choritos-a-la-chalaca.jpg
+- pulpo-al-olivo.jpg
+- yuquitas-a-la-huancaina.jpg
+- festin-mar-de-limon.jpg
+
+LECHES
+- leche-de-tigre-clasica.jpg
+- leche-carretillera.jpg
+- leche-mar-de-limon.jpg
+- leche-de-pantera.jpg
+
+CAUSAS
+- causa-acevichada.jpg
+- causa-de-langostinos.jpg
+- causa-de-atun.jpg
+- causa-de-pollo.jpg
+
+CEVICHES
+- ceviche-clasico.jpg
+
+ARROCES
+- arroz-con-mariscos.jpg
+- chaufa-de-mariscos.jpg
+- chaufa-de-pescado.jpg
+- chaufa-de-pollo.jpg
+- chaufa-veggie.jpg
+
+MARINOS
+- picante-de-mariscos.jpg
+- fetuccini-langostinos-panko.jpg
+- pulpo-a-la-parrilla.jpg
+
+CHICHARRONES Y JALEAS
+- chicharron-de-pota.jpg
+- chicharron-de-pescado.jpg
+- chicharron-de-pejerrey.jpg
+- chicharron-de-trucha.jpg
+- chicharron-de-mixto.jpg
+- chicharron-de-calamar.jpg
+- chicharron-de-langostinos.jpg
+- jalea-real.jpg
+
+SOPAS Y CONCENTRADOS
+- chilcano-especial.jpg
+- chupe-de-camarones.jpg
+- chupe-de-pescado.jpg
+- parihuela-de-pescado.jpg
+- sudado-de-pescado.jpg
+- sudado-mixto.jpg
+
+CRIOLLAZOS
+- lomo-saltado.jpg
+- fetuccini-con-lomo.jpg
+- seco-de-cabrito.jpg
+- milanesa-de-pescado.jpg
+- milanesa-de-pollo.jpg
+- pollo-a-la-plancha.jpg
+
+PESCAS DEL DIA
+- pescado-frito-o-plancha.jpg
+- pescado-a-lo-macho.jpg
+- pescado-a-la-menier.jpg
+- pescado-al-ajo.jpg
+- pescado-salsa-langostinos.jpg
+
+DUOS Y TRIOS
+- duo-clasico.jpg
+- duo-al-gusto.jpg
+- trio-clasico.jpg
+- trio-al-gusto.jpg
+
+MENU KIDS
+- menu-kids.jpg
+
+GUARNICIONES
+- yuca-o-papa-frita.jpg
+- yuca-o-camote-cocido.jpg
+- choclo.jpg
+- arroz-blanco.jpg
+- porcion-de-chaufa.jpg
+
+ZONA NIKKEI — MAKIS
+La imagen `SELECCIONA-TU-MAKIS.jpg` se muestra antes de elegir un sabor.
+Agrega una foto por cada sabor. Al elegirlo, el catalogo carga automaticamente
+la imagen correspondiente:
+- acevichado.jpg
+- acevichado-ahumado.jpg
+- acevichado-parrillero.jpg
+- avocado-rolls.jpg
+- banana-rolls.jpg
+- california.jpg
+- caribbean-rolls.jpg
+- carretillero.jpg
+- crab-rolls.jpg
+- crispy-rolls.jpg
+- chalaquita-rolls.jpg
+- filadelfia.jpg
+- fruti-fruti.jpg
+- kazan-maki.jpg
+- lomo-roll.jpg
+- mancora-rolls.jpg
+- mar-de-limon-rolls.jpg
+- olivo.jpg
+- pulpo-parrillero.jpg
+- spicy-crab.jpg
+- tartar-maki.jpg
+- tropical-rolls.jpg
+- trucha-tataki.jpg
+- volcan-rolls.jpg
+
+Las imagenes se muestran manteniendo sus proporciones (object-fit: cover).
